@@ -1,6 +1,7 @@
 import React, { useState} from 'react';
 import star from "./assets/star.png"
 import watchlist from "./assets/watchlist.png"
+import popcorn from "./assets/popcorn.jpg"
 import './App.css'
 
 function App() {
@@ -57,7 +58,12 @@ function App() {
   return (
     <div className="movie-container">
       <div className="nav-bar">
-        <h1 className="title-text">Find Your Film</h1>
+        <h1 className="title-text">Find New and Favorite Movies</h1>
+        <img
+          className="movie-img"
+          src={popcorn}></img>
+        
+        
       </div>
         <div className="button-container">
           <input

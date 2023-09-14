@@ -1,17 +1,12 @@
-body {
-	justify-content: center;
-	display: block;
-	align-items: center;
-	align-content: center;
-}
-
 .movie-container {
-	width: 550px;
+	width: 700px;
 	height: 780px;
+	border: 1px solid black;
+	border-radius: 5px 5px 0px 0px;
 }
 
 .nav-bar {
-	width: 550px;
+	width: auto;
 	height: 208px;
 	background: darkgray;
 }
@@ -19,21 +14,41 @@ body {
 .title-text {
 	color: white;
 	font-size: 30px;
+	position: absolute;
+	z-index: 1;
+	left: 40px;
+	top: 100px;
+	-webkit-animation: glow 1s ease-in-out infinite alternate;
+	-moz-animation: glow 1s ease-in-out infinite alternate;
+	animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+	from {
+		text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073,
+			0 0 70px #e60073;
+	}
+	to {
+		text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6,
+			0 0 80px #ff4da6;
+	}
 }
 
 .movie-img {
 	width: 100%;
-	height: 208px;
-	overflow: hidden;
-	position: static; /* Add position relative to the div */
+	height: 238px;
+	position: relative;
 	object-position: center;
 	object-fit: cover;
 }
 
 .button-container {
 	display: flex;
+	margin: auto;
+	width: auto;
 	justify-content: center;
 	padding-top: 10px;
+	position: relative;
 }
 
 .search-input {
@@ -44,12 +59,16 @@ body {
 	border-radius: 10px 0px 0px 10px;
 	gap: 0px;
 	border: 1px solid #ccc;
+	border-right: 0px solid #ccc;
+	box-shadow: 5px 5px 10px 0px grey;
 }
 
 .search-btn {
 	border-radius: 0px 10px 10px 0px;
 	gap: 0px;
 	border: 1px solid #ccc;
+
+	box-shadow: 5px 5px 10px 0px grey;
 }
 
 .movie-list-container {
@@ -64,15 +83,21 @@ body {
 	gap: 10px;
 	margin: 10px 10px;
 	width: 500px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	border-bottom: 1px solid lightgrey;
 }
 
 .movie-poster {
 	width: 150px;
 	height: 100%;
+	margin-bottom: 20px;
+	box-shadow: 5px 5px 10px 2px grey;
 }
 
 .movie-details {
 	width: 380px;
+	margin-left: 15px;
 }
 .movie-title {
 	align-content: center;
@@ -123,6 +148,10 @@ body {
 	margin-left: 50px;
 	height: 15px;
 	width: 15px;
+}
+
+.watchlist-icon:hover {
+	background-color: gold;
 }
 .watch-list-text {
 	font-size: 16px;
